@@ -37,8 +37,12 @@ input.style.color = "white";
 // input.value = "";
 // }
  if(input.value.includes("%")) {
-  input.value = input.value.replace(/%/g,"/100*");
-  } 
+  if(input.value.endsWith("%")){
+     input.value = input.value.replace(/%/g,"/100");
+  }else{
+       input.value = input.value.replace(/%/g,"/100*");
+  }
+ } 
 
 let calc = eval(input.value);
 input.value = parseFloat(calc.toFixed(3));

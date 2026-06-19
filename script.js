@@ -45,7 +45,7 @@ input.style.color = "white";
  } 
 
 let calc = eval(input.value);
-input.value = parseFloat(calc.toFixed(3));
+input.value = parseFloat(calc.toFixed(5));
  input.style.color = "#88e967";
 })
 
